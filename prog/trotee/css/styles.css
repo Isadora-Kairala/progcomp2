@@ -62,8 +62,40 @@ img {
     h2{
         text-align: center;
     }
-    td{
-        padding: 20px 0px;
+    td{  /*table, tr , td */
+        padding: 20px 0px; 
     }
+    table {
+    margin: 0 auto; /*espaçamento externo de 0 acima e abaixo e automático esquerda e direita*/
+}
+
+#x  {
+    padding: 20px 0px;
+}
+/*como especificar um td: td id = "x" e depois especificar no css como : #x { }  */ 
+
+
+.laranja {
+    background-color: orange;
     
+}
+.azul {
+    background-color: blue;
+
+}
+.preta {
+    background-color: black;
+    color: white;
+}
+.verde {
+    background-color: green;
+
+}
+.vermelha {
+    background-color: red;
+}
+.roxa {
+    background-color: purple;
+}
+
 }
