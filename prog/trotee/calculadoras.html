@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Trote Solidário - 2025</title>
+     <link rel="stylesheet" href="css/styles.css"/>
+     <script src="./js/scripts.js"> </script>
+  </head>
+
+  <body>
+  <header>
+        Trote Solidário - 2025
+  </header>
+    <nav>
+       <div id="links-menu">
+        <a href="index.html"> Home </a>
+         <a href="introducao.html"> Introdução </a>
+         <a href="objetivo.html"> Objetivo </a>
+         <a href="formato.html"> Formato </a>
+         <a href="gincana.html"> Gincana</a>
+         <a href="integracao.html"> Integração </a>
+         <a href="observacoes.html"> Observações </a>
+         <a href="calculadoras.html"> Calculadoras </a>
+       </div>
+          
+       <img src="images/trote.png"
+           alt="Trote_Solidário">
+
+       </nav>
+       <div class="container"> <!-- contém outros conteudos -->
+          <h2> Calculadoras </h2>
+         <form> <!-- formulario para entrada de dados do usuario-->
+            <div>
+                <label> Ação Social </label>
+                <input type="number" id="acaoSocial"/>
+            </div class="campos"> 
+            <br>
+          <!-- configuração para mais de um elemento  = class, se for epecificar um elemento só = id-->
+            <div class="campos">
+                <label> Homenagem </label>
+                <input type="number" id="homenagem">
+            </div>
+              <div class="campos"> 
+                 <button type="button" onclick="calcular()"> Calcular </button>
+                 <label id="resposta"> </label> 
+             </div>
+
+
+         </form>
+
+
+          
+         
+       </div>
+
+
+  </body>
+</html>
