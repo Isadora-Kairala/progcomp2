@@ -31,20 +31,43 @@
        <div class="container"> <!-- contém outros conteudos -->
           <h2> Calculadoras </h2>
          <form> <!-- formulario para entrada de dados do usuario-->
-            <div>
+           
+          
+          <div>
                 <label> Ação Social </label>
                 <input type="number" id="acaoSocial"/>
             </div class="campos"> 
             <br>
+
+
           <!-- configuração para mais de um elemento  = class, se for epecificar um elemento só = id-->
             <div class="campos">
                 <label> Homenagem </label>
                 <input type="number" id="homenagem">
             </div>
+
+
+            <div class="campos"> 
+                <label> Caixas de Leite (litros)</label>
+                <input type="number" id="leite"/>
+            </div>
+
+
+            <div class="campos">
+                <label> Kit Alimentação (avulso) </label>
+                <input type="number" id="kitavulso"/>
+            </div>
+            <div class="campos">
+                <label> Lata de Suplemento (avulso)</label>
+                <input type="number" id="suplementoavulso"/>
+            </div>
+
               <div class="campos"> 
                  <button type="button" onclick="calcular()"> Calcular </button>
                  <label id="resposta"> </label> 
              </div>
+
+             
 
 
          </form>
