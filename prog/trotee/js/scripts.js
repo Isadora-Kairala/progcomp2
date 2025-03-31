@@ -13,13 +13,29 @@ function calcular(){
     let homenagem = document.getElementById("homenagem").value
     soma = soma + Number(homenagem)
 
-
-    let kitavulso = document.getElementById("kitavulso").value
-    soma = soma + (30 * Number(kitavulso))
-
-
-    let suplementoavulso = document.getElementById("suplementoavulso").value
-    soma = soma + (15 * Number(suplementoavulso))
+    // recupera a  qtd de kits
+    let kit = Number(document.getElementById("kit").value)
+    let equipe = document.getElementById("equipe").value
+    let pontoskit = 0 
+    if (equipe == "Laranja") {
+        if (kit >= 97) {
+            pontoskit = 5000 + ((kit - 97) * 30)
+        }
+        else if (kit >= 78){
+            pontoskit = 4000 + ((kit - 78) * 30)
+        }
+        else if (kit >= 49) {
+            pontoskit = 2500  + ((kit - 49) *30) 
+        }
+        else if ( kit >= 19) {
+            pontoskit = 1000 + ((kit - 19) * 30)
+        }   
+        
+    }
+    alert(pontoskit)
+    soma = soma + (pontoskit);(kit)
+    let suplemento = document.getElementById("suplemento").value
+    soma = soma + (15 * Number(suplemento))
 
     
     let arroz5 = document.getElementById("arroz5").value
