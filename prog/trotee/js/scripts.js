@@ -1,29 +1,28 @@
 function calcular(){
     //recupera o valor da acão social digitado 
     //declarar variável sem tipo
-    let soma = 0
+    let soma = 0, acaoSocial, homenagem, kit, suplemento, leite, arroz1, arroz5, feijao1, feijao2, oleo,
     
-    let acaoSocial = document.getElementById("acaoSocial").value
+     acaoSocial = document.getElementById("acaoSocial").value
     soma = soma + Number(acaoSocial)
 
     
-    let leite = document.getElementById("leite").value
+     leite = document.getElementById("leite").value
     soma = soma + (2 * Number(leite))
     
     //recupera o valor da homenagem digitado
-    let homenagem = document.getElementById("homenagem").value
+     homenagem = document.getElementById("homenagem").value
     soma = soma + Number(homenagem)
     let equipe = document.getElementById("equipe").value
     // recupera a  qtd de kits
-    let kit = Number(document.getElementById("kit").value)
+     kit = Number(document.getElementById("kit").value)
     
-    let suplemento = Number(document.getElementById("suplemento").value)
+     suplemento = Number(document.getElementById("suplemento").value)
     
     let pontosKitSup = 0 
     if (equipe == "Laranja") {
         if (kit >= 97 && suplemento >= 49) {
             pontosKitSup = 5000 + ((kit - 97) * 30) + ((suplemento - 49) * 15)
-
         }
         else if (kit >= 78 && suplemento >= 39){
             pontosKitSup = 4000 + ((kit - 78) * 30) + ((suplemento - 39) * 15)
@@ -36,7 +35,7 @@ function calcular(){
         }   
     }
 
-    if (equipe == "Preta") {
+    else if (equipe == "Preta") {
         if (kit >= 103 && suplemento >= 52) {
             pontosKitSup = 5000 + ((kit - 103 ) * 30) + ((suplemento - 52 ) * 15)
         }
@@ -51,7 +50,7 @@ function calcular(){
         }   
     }
 
-    if (equipe == "Roxa") {
+   else if (equipe == "Roxa") {
         if (kit >= 102 && suplemento >= 51 ) {
             pontosKitSup = 5000 + ((kit -102 ) * 30) + ((suplemento - 51 ) * 15)
         }
@@ -65,34 +64,60 @@ function calcular(){
             pontosKitSup = 1000 + ((kit - 20) * 30) + ((suplemento - 10 ) * 15)
         }   
     }
-            
-
+    else if (equipe == "Verde") {
+        if (kit >= 88 && suplemento >= 44 ) {
+            pontosKitSup = 5000 + ((kit - 88 ) * 30) + ((suplemento - 44 ) * 15)
+        }
+        else if (kit >= 70 && suplemento >= 35 ){
+            pontosKitSup = 4000 + ((kit - 70 ) * 30) + ((suplemento - 35 ) * 15)
+        }
+        else if (kit >= 44 && suplemento >= 22 ) {
+            pontosKitSup = 2500  + ((kit - 44 ) *30) + ((suplemento - 22 ) * 15)
+        }
+        else if ( kit >= 18 && suplemento >= 9) {
+            pontosKitSup = 1000 + ((kit - 18) * 30) + ((suplemento - 9 ) * 15)
+        }   
+    }
+    else if (equipe == "Vermelha") {
+        if (kit >= 93 && suplemento >= 47 ) {
+            pontosKitSup = 5000 + ((kit - 93 ) * 30) + ((suplemento - 47 ) * 15)
+        }
+        else if (kit >= 74 && suplemento >= 38 ){
+            pontosKitSup = 4000 + ((kit - 74 ) * 30) + ((suplemento - 38 ) * 15)
+        }
+        else if (kit >= 47  && suplemento >= 24 ) {
+            pontosKitSup = 2500  + ((kit - 47 ) *30) + ((suplemento - 24  ) * 15)
+        }
+        else if ( kit >= 19 && suplemento >= 9 ) {
+            pontosKitSup = 1000 + ((kit - 19 ) * 30) + ((suplemento - 9 ) * 15)
+        }   
+    }
 
 
 
     soma =  soma + (pontosKitSup)
-    let arroz5 = document.getElementById("arroz5").value
+    arroz5 = document.getElementById("arroz5").value
     soma = soma + (5 * Number(arroz5))
 
 
-    let arroz1 = document.getElementById("arroz1").value
+    arroz1 = document.getElementById("arroz1").value
     soma = soma +  Number(arroz1)
 
 
 
-    let feijao2 = document.getElementById("feijao2").value
+    feijao2 = document.getElementById("feijao2").value
     soma = soma + (2 * Number(feijao2))
 
 
-    let feijao1 = document.getElementById("feijao1").value
+    feijao1 = document.getElementById("feijao1").value
     soma = soma + Number(feijao1)
 
 
-    let macarrao = document.getElementById("macarrao").value
+   macarrao = document.getElementById("macarrao").value
     soma = soma + (0.5 * Number(macarrao))
 
 
-    let oleo = document.getElementById("oleo").value
+    oleo = document.getElementById("oleo").value
     soma = soma + Number(oleo)
 
     
