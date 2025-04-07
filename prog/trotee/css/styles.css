@@ -105,16 +105,16 @@ img {
 
 
 
-
 .campos 
    {display: flex;
-    align-items: center; /* Alinha os itens verticalmente */
-    margin-bottom: 10px;} /*alinhamento entre os labels*/
+    margin-bottom: 10px; /*alinhamento entre os labels*/
+    justify-content: center;
+}
 
 
 
 .campos label 
-   {width: 300px; /* LARGURA  fixa para os labels, distancia entre o escrito e a caixa */
+   {width: 200px; /* LARGURA  fixa para os labels, distancia entre o escrito e a caixa */
     margin-right:20px; /* espaço entre label e input */
     font-weight: bold;
     
@@ -176,5 +176,25 @@ img {
 #equipe:hover{
     background-color:#008080 ;
 }
+
+#laranjinha {
+
+    background-color: #DAA520	;
+}
+#pretinha{
+    background-color: #1C1C1C;
+    color: white;
+}
+#roxinha {
+    background-color: #9370DB;
+}
+#verdinha{background-color: #2E8B57	
+
+}
+#vermelhinha{
+    background-color: #B22222	;
+
+}
+
 
 }
