@@ -1,7 +1,7 @@
 function calcular(){
     //recupera o valor da acão social digitado 
     //declarar variável sem tipo
-    let soma = 0, acaoSocial, homenagem, kit, suplemento, leite, arroz1, arroz5, feijao1, feijao2, oleo,
+    let soma = 0, acaoSocial, homenagem, kit, suplemento, leite, arroz1, arroz5, feijao1, feijao2, oleo;
     
      acaoSocial = document.getElementById("acaoSocial").value
     soma = soma + Number(acaoSocial)
@@ -77,8 +77,8 @@ function calcular(){
         else if ( kit >= 18 && suplemento >= 9) {
             pontosKitSup = 1000 + ((kit - 18) * 30) + ((suplemento - 9 ) * 15)
         }   
-    }
-    else if (equipe == "Vermelha") {
+        
+    } else  {
         if (kit >= 93 && suplemento >= 47 ) {
             pontosKitSup = 5000 + ((kit - 93 ) * 30) + ((suplemento - 47 ) * 15)
         }
@@ -120,29 +120,49 @@ function calcular(){
     oleo = document.getElementById("oleo").value
     soma = soma + Number(oleo)
 
-    
+    sangue = Number(document.getElementById("sangue").value)
 
+    if (equipe == "Laranja"){
+        if (sangue >= 49){
+            pontosSangue = 2500 + (sangue - 49) * 20
+        }
+        else {
+            pontosSangue = sangue * 20
+        }
+    }
+    else if (equipe == "Preta"){
+        if (sangue >= 52){
+            pontosSangue = 2500 + (sangue - 52) * 20
+        }
+        else {
+            pontosSangue = sangue * 20
+        }
+    }
+    else if (equipe == "Roxa"){
+        if (sangue >= 51){
+            pontosSangue = 2500 + (sangue - 51) * 20
+        }
+        else {
+            pontosSangue = sangue * 20
+        }
+    }
+    else if (equipe == "Verde"){
+        if (sangue >= 44){
+            pontosSangue = 2500 + (sangue - 44) * 200
+        }
+        else {
+            pontosSangue = sangue * 20
+        }
+    } else {
+        if (sangue >= 47){
+            pontosSangue = 2500 + (sangue - 47) * 200
+        }
+    }
+    // soma o sangue
+    soma = soma + pontosSangue
 
-
-
-
-
-
-
-    
     document.getElementById("resposta").innerHTML = soma.toFixed(2)
     
     }
 
-    function toggleDropdown() {
-        document.querySelector('.select-options').classList.toggle('active');
-      }
-      
-      function selectOption(cor, nome) {
-        const select = document.querySelector('.select-selected');
-        select.innerHTML = `<span class="color-box" style="background: ${cor}"></span> ${nome}`;
-        document.getElementById('equipe').value = nome;
-        document.querySelector('.select-options').classList.remove('active');
-      }
-    
-
+   
