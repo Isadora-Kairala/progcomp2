@@ -56,3 +56,23 @@ git push https://github.com/seu_usuario/seu_repositorio.git main
 
 // quando quiser atualizar o github com as alterações locais:
 repetir os passos 4, 5 e 7
+
+
+
+
+
+
+
+
+
+
+
+Your branch and 'origin/main' have diverged,
+and have 1 and 4 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   README.md
