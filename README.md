@@ -2,4 +2,4 @@ Este Repositório contém o conteúdo das aulas da disciplina de Programação d
 sendo até agora:
 - HTML
 - CSS
-- JAVASCRIPT
+- JAVASCRIPT *
