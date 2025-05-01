@@ -23,4 +23,16 @@ se depois do while eu ter um alert em conta quanto vai estar avaliado conta? 7
 
 
 oque preconiza uma estutura d repeticao = condicao de parada ; incremento ou decrememnto
+
+
+
+na verdade na estutura original era algo como:
+let nota 1 = Number(prompt` Informe a nota 1`)
+let nota 2 = Number(prompt` Informe a nota 2`)
+let nota 3 = Number(prompt` Informe a nota 3`)
+let nota 4 = Number(prompt` Informe a nota 4`)
+let nota 5 = Number(prompt` Informe a nota 5`)
+let nota 6 = Number(prompt` Informe a nota 6`)
+portanto simplificou tudo com o while, mas tem como faze também com powerlooping
+ou seja o code academy é muito bom pra aprender
 */
