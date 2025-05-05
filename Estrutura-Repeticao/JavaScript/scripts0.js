@@ -2,7 +2,7 @@ function exe0(){
     let nota 
     let conta = 1  // conta do 1 até o 6
     let soma = 0 
-
+   // enquanto conta é menor ou igual a 6 
     while (conta <= 6){
         nota = Number(prompt(` Informe a nota ${conta}`)) //conta seria o numero "informe a nota 1" 
         soma = soma + nota 
@@ -12,6 +12,35 @@ function exe0(){
     let media = soma / 6 
     alert(` A média das notas é  ${ media.toFixed(1)}`)
 }
+
+/* estrutura de repetição :
+ 
+exemplo : 
+
+let conta = 1
+let soma = 0
+ while (conta <= 5 ) {
+    alert('oi')
+    soma = soma + conta
+    conta++
+ }
+
+ nesse caso a soma armazena o resultado de soma += conta
+ sendo soma = 0 entao  no inicio sendo conta = 1 :
+ soma + conta =  0 + 1
+ conta++ : conta = conta + 1 
+ e aassim por diante
+ soma + conta = 1 + 2
+ soma + conta = 3 + 3
+ soma + conta = 6 + 4
+ soma + conta = 10 + 5
+ soma + conta = 15 + 6
+ porém quando conta for 6 da falso, pois nao é menor ou igual a 5.
+
+
+*/
+
+
 
 /*
 let conta = 1
