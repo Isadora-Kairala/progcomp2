@@ -1,0 +1,64 @@
+function exe3(){
+    let idade;
+    let contagem = 1;  // conta do 1 até o 8, qu eé a quant. de participantes
+    let primeiro = 0;
+    let segundo = 0; //    
+    let terceiro = 0;
+    let quarto = 0; 
+    let quinto = 0;//  
+    
+
+
+    
+    while (contagem <= 8)
+        { // conta seria o participante, que vai do 1 até o 10 
+        idade = Number(prompt(` Participante ${contagem}: Digite sua idade : `));
+
+    
+        soma += idade 
+        if (idade <= 15){
+            primeiro++;
+        } else if (idade >= 16 && idade <= 30){
+            segundo++;
+        } else if ( idade >= 31 && idade <= 45){
+            terceiro ++;
+        } else if ( idade >= 46 && idade <= 60 ){
+            quarto++
+        } else if (idade >= 60 && idade <= 120){
+            quinto++;
+        } else {
+            alert(`Idade inválida!!`)
+            continue
+        }
+
+            contagem++;// igual a conta = conta + 1, adiciona mais um a conta e passa pro prox prompt
+    
+    }
+
+
+
+    let porcentPri = (primeiro / 8) * 100;
+    let porcentUlt = (quinto / 8) * 100;
+    
+    
+
+    alert( `Resultado da Pesquisa:
+    \nPessoas por faixa etária : \n 1° Faixa (até 15 anos ) = ${primeiro} \n 2° Faixa (de 16 a 30 anos) = ${segundo} \n 3° Faixa (de 31 a 45 anos) = ${terceiro} \n4° Faixa (de 46 a 60 anos) = ${quarto} \n5° Faixa (acima de 60 anos) = ${quinto}
+    \n% de pessoas na primeira faixa etária : ${porcentPri.toFixed(2)}
+    \n% de pessoas na ultimaa faixa etária : ${porcentUlt.toFixed(2)}`)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
