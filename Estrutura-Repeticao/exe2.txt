@@ -1,0 +1,27 @@
+function exe2(){
+
+
+let preco = 5.0
+let qtde = 120
+let lucro
+const despesa = 200
+let aux = ""
+let maiolucro = 0
+let precomaiorlucro = 0
+let qtdemaiorlucro = 0
+
+while(preco >= 1.0){
+    lucro = (preco * qtde) - despesa
+    if (lucro > maiorlucro){
+        maiorlucro = lucro
+        precomaiorlucro = preco
+        qtdemaiorlucro = qtde
+    }
+    aux = aux + "\n" + (`Preço: ${preco} - Qtde: ${qtde} - despesas: ${despesa} - lucro: ${lucro}`)
+    
+    preco -= 0.50
+    qtde += 26
+
+    }
+ alert(aux)
+}
