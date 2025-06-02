@@ -83,6 +83,7 @@
         let  peso = 0, porc = 0
         let conta = 0
         let media = 0
+        let porcentagem40
 
         for(conta = 1; conta <= 5 ; conta++){
             idade = Number(prompt(` Insira sua idade :`))
@@ -105,10 +106,11 @@
             }
         }   
          media = alturas / mediaalturas
+         porcentagem40 = (porc /  5) * 100
 
-        console.log(` pessoas maiores de 50 anos : ${sup}\n
+         console.log(` pessoas maiores de 50 anos : ${sup}\n
                     media das alturas entre 10 e 20 anos : ${media} \n
-                    porcentagem de pessoas inferior a 40: ${porc}`)
+                    porcentagem de pessoas inferior a 40: ${porcentagem40.toFixed(2)}`)
 
     }
 
@@ -180,20 +182,30 @@
 
     function exe10() {
 
-     let numero = 0, soma = 0, conta = 0, pares = 0, primos = 0
+     let numero = 0, soma = 0, conta = 0, pares = 0, primos = 0, div = 0
 
 
       for(conta = 1; conta <= 10; conta++){
-        numero = Number(prompt(`Insira um número qualquer :`))
+        numero = Number(prompt(`Insira o ${conta}° número :`))
        
         
         if( numero % 2 == 0){
             pares += numero 
         }
-        
+        if (numero > 1) {
+            for (let i = 1; i <= numero; i++) {
+            
+            if (numero % i === 0) {
+                div++
+                 }
+                }
 
-      }
+            if (div === 2) {
+            primos += numero;
+            }
+                }
+          } 
 
-
-
+        alert(`A soma dos numeros pares é  : ${pares} \n
+                     A soma dos numeros primos é : ${primos} `)
     }
