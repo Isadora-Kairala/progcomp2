@@ -82,13 +82,25 @@
         let altura = 0
         let  peso = 0, porc = 0
         let conta = 0
-        let media = 0
+        let media
         let porcentagem40
 
         for(conta = 1; conta <= 5 ; conta++){
+
+            do{
             idade = Number(prompt(` Insira sua idade :`))
+              }while(idade <= 0)
+
+
+            do{
             altura = Number(prompt(` insira sua altura`))
+              }while(altura <= 0)
+
+
+            do{  
             peso = Number(prompt(`Insira seu peso`))
+              }while(peso <= 0)
+
 
             if(idade > 50){
                 sup++
@@ -120,12 +132,28 @@
 
         for(conta = 1; conta <= 6; conta++){
 
-            idade = Number(prompt(` Insira a sua idade :` ))
-            altura = Number(prompt(` Insira sua altura`))
-            peso = Number(prompt(` Insira seu peso `))
-            corOlho = prompt(` Insira a cor do seu olho, sendo: \n A - azul \n P - preto \n V - verde \n C- castanho `)
-            corCabelo = prompt(` Insira a cor do seu cabelo, sendo : \n P - preto \n C - castanho \n L - louro \n R - ruivo`)
-            
+            do{
+            idade = Number(prompt(` participante ${conta} - Insira a sua idade :` ))
+              }while( idade <= 0)
+
+
+            do{  
+            altura = Number(prompt(`participante ${conta} - Insira sua altura`))
+              }while(altura <= 0 )
+
+            do{
+            peso = Number(prompt(` participante ${conta} -Insira seu peso `))
+              }while(peso <= 0)
+
+            do {
+            corOlho = prompt(` participante ${conta} - Insira a cor do seu olho, sendo: \n A - azul \n P - preto \n V - verde \n C- castanho `).toUpperCase()
+            }while( corOlho != `A` && corOlho != `P` && corOlho != `V` && corOlho != `C`)
+
+
+            do{
+            corCabelo = prompt(` participante ${conta} -  Insira a cor do seu cabelo, sendo : \n P - preto \n C - castanho \n L - louro \n R - ruivo`).toUpperCase()
+            }while(corCabelo != "P" && corCabelo != "C" && corCabelo != "L" && corCabelo != "R")
+
 
             if( idade > 50 && peso < 60){
                 somaidade50++
@@ -135,31 +163,43 @@
                 somaIdadeALt50 += idade
             }
             
-            if(corOlho == "A" || corOlho == "a"){
+            if(corOlho == "A"){
                 porcentA++
             }
-            if( corCabelo == "R" || corCabelo == "r" && corOlho != "A" || corOlho != "a"){
+            if( corCabelo == "R" && corOlho != "A" ){
                 quantRuivoAzul++
             }
 
-        media150  =  somaIdadeALt50 / somaidade150
-        porcentagemA = (porcentA / 6) * 100
+        
+            }
+            media150  =  somaIdadeALt50 / somaidade150
+            porcentagemA = (porcentA / 6) * 100
 
-        console.log(` A quantidade de pessoas com idade superior a 50  e  peso inferior a 60 kg é  ${ somaidade50} \n
-                     A média das idades das pessoas com altura inferior a 1,50 m é : ${media150} \n
-                     A porcentagem de pessoas com olhos azuis entre todas as pessoas é :  ${ porcentagemA.toFixed(2)} % \n
-                     A quantidade de pessoas ruivas que não possuem olho azul é : ${ quantRuivoAzul} `)
-
-        }
+            console.log(` A quantidade de pessoas com idade superior a 50  e  peso inferior a 60 kg é  ${ somaidade50}`)
+            console.log(` A média das idades das pessoas com altura inferior a 1,50 m é : ${media150 }`) 
+            console.log(` A porcentagem de pessoas com olhos azuis entre todas as pessoas é :  ${ porcentagemA.toFixed(2)} % `)
+            console.log(` A quantidade de pessoas ruivas que não possuem olho azul é : ${ quantRuivoAzul} `)
         }
 
     function exe9(){
         let idade = 0, peso = 0, altura = 0, media, conta, somaIdade = 0, pesoAltura90 = 0, Idade103090 = 0, porcentagem
  
         for(conta = 1; conta <= 10; conta++){
+
+               do{
                 idade = prompt(` Insira sua idade :`)
+                 }while( idade <= 0)
+
+
+                 do{
                 peso = prompt(`Insira seu peso em kg `)
+                   }while(peso <= 0)
+
+
+                do{   
                 altura = prompt(`Insira sua altura em metros : `)
+                  }while(altura <=0)
+
 
                 if(peso > 90 && altura < 1.50){
                 pesoAltura90++
@@ -171,41 +211,39 @@
                 somaIdade += idade
             }
 
-            media = somaIdade / 10
-            porcentagem = (Idade103090 / 10 ) * 100
+        media = somaIdade / 10
+        porcentagem = (Idade103090 / 10 ) * 100
 
-            console.log(`A média das idades entre as 10 pessoas é  : ${media} \n
-                  A quantidade das pessoas com peso superior a 90 kg e altura inferior a 1,50 é : ${pesoAltura90}    \n
-                  A porcentagem de pessoas com idade entre 10 e 30 anos entre os que medem 1,90 é: ${porcentagem.toFixed(1)}% `)
+        console.log(`A média das idades entre as 10 pessoas é  : ${media} \n
+            A quantidade das pessoas com peso superior a 90 kg e altura inferior a 1,50 é : ${pesoAltura90}    \n
+            A porcentagem de pessoas com idade entre 10 e 30 anos entre os que medem 1,90 é: ${porcentagem.toFixed(1)}% `)
         
     }
 
     function exe10() {
 
-     let numero = 0, soma = 0, conta = 0, pares = 0, primos = 0, div = 0
+        let numero = 0, soma = 0, conta = 0, pares = 0, primos = 0, aux = 0
 
 
-      for(conta = 1; conta <= 10; conta++){
-        numero = Number(prompt(`Insira o ${conta}° número :`))
-       
+        for(conta = 1; conta <= 10; conta++){
+            numero = Number(prompt(`Insira o ${conta}° número :`))
         
-        if( numero % 2 == 0){
-            pares += numero 
-        }
-        if (numero > 1) {
-            for (let i = 1; i <= numero; i++) {
             
-            if (numero % i === 0) {
-                div++
-                 }
-                }
-
-            if (div === 2) {
-            primos += numero;
+            if( numero % 2 == 0){
+                pares += numero 
             }
+                let div = 0
+                for(let aux = numero; aux > 0; aux--){
+                    if(numero % aux == 0){
+                        div++
+                    }
                 }
-          } 
 
-        alert(`A soma dos numeros pares é  : ${pares} \n
-                     A soma dos numeros primos é : ${primos} `)
+
+                if(div == 2){
+                    primos += numero
+                }
+            }
+            console.log(`A soma dos numeros pares é  : ${pares}`)
+            console.log(`A soma dos numeros primos é : ${primos}`)
     }
