@@ -9,47 +9,40 @@ Disciplina de Programação de Computadores I
 
 
 // configura o email no git
-
-git config --global user.email "seu@email.com"
+1 -git config --global user.email "seu@email.com"
 
 
 
 
 // configura o nome no git
-
-git config --global user.name "Seu nome"
-
+2 -git config --global user.name "Seu nome"
 
 
-// cria repositório local
 
-git init
+// cria repositório loca
+3 -git init
 
 
 
 
 // adiciona os arquivos para controle de versão
-
-git add .
+4 -git add .
 
 
 // gera uma versão
-
-git commit -m "primeiro site"
+5 -git commit -m "primeiro site"
 
 
 
 
 // configura a ramificação do repositório no github
-
-git branch -M main
+6 -git branch -M main
 
 
 
 
 // envia o projeto para o github
-
-git push https://github.com/seu_usuario/seu_repositorio.git main
+7 -git push https://github.com/seu_usuario/seu_repositorio.git main
 
 
 

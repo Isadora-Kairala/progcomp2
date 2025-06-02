@@ -1,3 +1,190 @@
+    
+    function exe1(){ //quick sort, algortimo de ordenação
+        let w, x, y, z, aux
+        let contagem = 1
+        let grupo = 1
+        
+        while (grupo <=5){
+        w = Number(prompt(`Informe o 1° valor `))
+        x = Number(prompt(`Informe o 2° valor `))
+        y = Number(prompt(`Informe o 3° valor `))
+        z = Number(prompt(`Informe o 4° valor `))
+        
+        while(contagem <=3){
+            if(w > x){
+                aux = w; w = x, x = aux // aux = a; a = b; b = aux
+            }
+            if(x > y){
+                aux = x; x = y; y = aux // aux = b; b = c; c = aux
+            }
+            if(y > z) {
+                aux = y; y = z; z = aux
+            }
+            contagem++
+        
+            }
+        
+            alert(`Ordem Crescente : ${w}, ${x}, ${y}, ${z} 
+                \n Ordem Decrescente : ${z}, ${y}, ${x}, ${w}`)
+                grupo++
+            }
+        
+        }
+
+        function exe1() {
+            let grupo = 1;  // Conta os grupos, de 1 até 5
+            let mensagem = "Resultado por ordem lida:\n"; // Para armazenar os resultados na ordem lida
+            
+            // Coleta os valores de cada grupo
+            while (grupo <= 5) { 
+                // Coleta 4 valores para cada grupo
+                let valor1 = Number(prompt(`Grupo ${grupo} - Valor 1:`));
+                let valor2 = Number(prompt(`Grupo ${grupo} - Valor 2:`));
+                let valor3 = Number(prompt(`Grupo ${grupo} - Valor 3:`));
+                let valor4 = Number(prompt(`Grupo ${grupo} - Valor 4:`));
+        
+                // Exibe os valores na ordem lida
+                mensagem += `Grupo ${grupo}: ${valor1}, ${valor2}, ${valor3}, ${valor4}\n`;
+        
+                // Ordenar os valores em ordem crescente e decrescente
+                let crescente = [valor1, valor2, valor3, valor4].sort((a, b) => a - b);
+                let decrescente = [valor1, valor2, valor3, valor4].sort((a, b) => b - a);
+        
+                // Exibe os valores ordenados
+                mensagem += `Grupo ${grupo} - Crescente: ${crescente.join(", ")}\n`;
+                mensagem += `Grupo ${grupo} - Decrescente: ${decrescente.join(", ")}\n`;
+        
+                grupo++;
+            }
+        
+            // Exibir tudo no alert
+            alert(mensagem);
+        }
+
+
+        function exe2(){
+
+
+            let preco = 5.0
+            let qtde = 120
+            let lucro
+            const despesa = 200
+            let aux = ""
+            let maiolucro = 0
+            let precomaiorlucro = 0
+            let qtdemaiorlucro = 0
+            
+            while(preco >= 1.0){
+                lucro = (preco * qtde) - despesa
+                if (lucro > maiorlucro){
+                    maiorlucro = lucro
+                    precomaiorlucro = preco
+                    qtdemaiorlucro = qtde
+                }
+                aux = aux + "\n" + (`Preço: ${preco} - Qtde: ${qtde} - despesas: ${despesa} - lucro: ${lucro}`)
+                
+                preco -= 0.50
+                qtde += 26
+            
+                }
+             alert(aux)
+            }
+
+            
+        function exe3(){
+            let idade;
+            let contagem = 1;  // conta do 1 até o 8, qu eé a quant. de participantes
+            let primeiro = 0;
+            let segundo = 0; //    
+            let terceiro = 0;
+            let quarto = 0; 
+            let quinto = 0;//  
+            
+        
+        
+            
+            while (contagem <= 8)
+                { // conta seria o participante, que vai do 1 até o 10 
+                idade = Number(prompt(` Participante ${contagem}: Digite sua idade : `));
+        
+            
+                soma += idade 
+                if (idade <= 15){
+                    primeiro++;
+                } else if (idade >= 16 && idade <= 30){
+                    segundo++;
+                } else if ( idade >= 31 && idade <= 45){
+                    terceiro ++;
+                } else if ( idade >= 46 && idade <= 60 ){
+                    quarto++
+                } else if (idade >= 60 && idade <= 120){
+                    quinto++;
+                } else {
+                    alert(`Idade inválida!!`)
+                    continue
+                }
+        
+                    contagem++;// igual a conta = conta + 1, adiciona mais um a conta e passa pro prox prompt
+            
+            }
+        
+        
+        
+            let porcentPri = (primeiro / 8) * 100;
+            let porcentUlt = (quinto / 8) * 100;
+            
+            
+        
+            alert( `Resultado da Pesquisa:
+            \nPessoas por faixa etária : \n 1° Faixa (até 15 anos ) = ${primeiro} \n 2° Faixa (de 16 a 30 anos) = ${segundo} \n 3° Faixa (de 31 a 45 anos) = ${terceiro} \n4° Faixa (de 46 a 60 anos) = ${quarto} \n5° Faixa (acima de 60 anos) = ${quinto}
+            \n% de pessoas na primeira faixa etária : ${porcentPri.toFixed(2)}
+            \n% de pessoas na ultimaa faixa etária : ${porcentUlt.toFixed(2)}`)
+        }
+        function exe3(){
+            let idade;
+            let contagem = 1;  // conta do 1 até o 8, qu eé a quant. de participantes
+            let primeiro = 0;
+            let segundo = 0; //    
+            let terceiro = 0;
+            let quarto = 0; 
+            let quinto = 0;//  
+            
+        
+        
+            
+            while (contagem <= 8)
+                { // conta seria o participante, que vai do 1 até o 10 
+                idade = Number(prompt(` Participante ${contagem}: Digite sua idade : `));
+        
+                
+                    soma += idade 
+                    if (idade <= 15){
+                        primeiro++;
+                    } else if (idade >= 16 && idade <= 30) {
+                        segundo++;
+                    } else if ( idade >= 31 && idade <= 45){
+                        terceiro ++;
+                    } else if ( idade >= 46 && idade <= 60 ) {
+                        quarto++
+                    } else {
+                        quinto++;
+                    }
+        
+                    contagem++;// igual a conta = conta + 1, adiciona mais um a conta e passa pro prox prompt
+               }
+            let porcentPri = (primeiro / 8) * 100;
+            let porcentUlt = (quinto / 8) * 100;
+            
+            
+        
+            alert( `Resultado da Pesquisa:
+            \nPessoas por faixa etária : \n 1° Faixa (até 15 anos ) = ${primeiro} \n 2° Faixa (de 16 a 30 anos) = ${segundo} \n 3° Faixa (de 31 a 45 anos) = ${terceiro} \n4° Faixa (de 46 a 60 anos) = ${quarto} \n5° Faixa (acima de 60 anos) = ${quinto}
+            \n% de pessoas na primeira faixa etária : ${porcentPri.toFixed(2)}
+            \n% de pessoas na ultimaa faixa etária : ${porcentUlt.toFixed(2)}`)
+        }
+        
+        
+    
     function exe4() {
 
             let numero  = Number(prompt(`insira o numero para a tabuada :`))
