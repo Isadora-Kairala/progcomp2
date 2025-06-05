@@ -4,68 +4,103 @@ sendo até agora:
 - CSS
 - JAVASCRIPT *
 
-Comandos Git :
-Disciplina de Programação de Computadores I
-
-
-// configura o email no git
-1 -git config --global user.email "seu@email.com"
+# 💻 Comandos Git  
+📚 *Disciplina de Programação de Computadores I*
 
 
 
+## 🛠️ Configuração Inicial
 
-// configura o nome no git
-2 -git config --global user.name "Seu nome"
+Antes de começar a usar o Git, configure seu nome e e-mail (isso será usado para identificar suas alterações):
 
+```bash
+# 1. Configura o e-mail
+git config --global user.email "seu@email.com"
 
+# 2. Configura o nome
+git config --global user.name "Seu nome"
+```
 
-// cria repositório loca
-3 -git init
+---
 
+## 📦 Criando e Enviando um Repositório
 
+```bash
+# 3. Cria um repositório Git local
+git init
 
+# 4. Adiciona os arquivos para controle de versão
+git add .
 
-// adiciona os arquivos para controle de versão
-4 -git add .
+# 5. Cria uma versão (commit) com uma mensagem descritiva
+git commit -m "primeiro site"
 
+# 6. Configura a branch principal como "main"
+git branch -M main
 
-// gera uma versão
-5 -git commit -m "primeiro site"
+# 7. Envia o projeto local para o repositório remoto no GitHub
+git push https://github.com/seu_usuario/seu_repositorio.git main
+```
 
+---
 
+## 🔄 Atualizando o repositório no GitHub
 
+Sempre que fizer alterações locais e quiser atualizar no GitHub, repita os seguintes passos:
 
-// configura a ramificação do repositório no github
-6 -git branch -M main
+```bash
+git add .
+git commit -m "mensagem descritiva"
+git push
+```
 
+---
 
+## ⚠️ Mensagens comuns de erro
 
+### 1. Divergência entre branches
+```
+Your branch and 'origin/main' have diverged, and have 1 and 4 different commits each, respectively.
+(use "git pull" if you want to integrate the remote branch with yours)
+```
 
-// envia o projeto para o github
-7 -git push https://github.com/seu_usuario/seu_repositorio.git main
+🧩 **Solução:**
+Você deve sincronizar sua branch com a do GitHub:
 
+```bash
+git pull
+```
 
-
-
-// quando quiser atualizar o github com as alterações locais:
-repetir os passos 4, 5 e 7
-
-
-
-
-
-
-
-
-
-
-
-Your branch and 'origin/main' have diverged,
-and have 1 and 4 different commits each, respectively.
-  (use "git pull" if you want to integrate the remote branch with yours)
-
+### 2. Merge incompleto
+```
 All conflicts fixed but you are still merging.
-  (use "git commit" to conclude merge)
+(use "git commit" to conclude merge)
+```
 
-Changes to be committed:
-        modified:   README.md
+🧩 **Solução:**
+Finalize o processo de merge com:
+
+```bash
+git commit
+```
+
+---
+
+## ✅ Dica Final
+
+Sempre verifique o status do repositório com:
+
+```bash
+git status
+```
+
+Ele vai te dizer exatamente o que está acontecendo e o que falta fazer. 😉
+
+---
+
+Feito com 💙 para estudantes de Programação de Computadores I.
+
+
+
+
+
