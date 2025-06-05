@@ -50,6 +50,7 @@ function exe2(){
         
             }
     }
+
     console.log(` Os números multiplos de 2 são : ${mult2} `)
     console.log(` Os números multiplos de 3 são : ${mult3}`)
     console.log(` Os números mult de 2 e 3 são : ${mult2e3}`)
@@ -72,5 +73,36 @@ function exe3(){
         console.log(`  ${codCliente[i]}   \t   ${codProduto[i]}   \t    ${quant[i]}`)
                             }
                         
+
+}       
+function exe03profe(){
+
+        let vet = [],gostouMuito = [], gostou = [], naoGostou = [], porcent
+
+
+        for( let i = 0; i < 10 ; i++){
+            do{
+            vet[i] = (Number(prompt(` ${i + 1}° Insira sua resposta: \n 1 - Gostou muito \n 2 - Gostou \n 3 - Não Gostou `)))
+            }while( vet[i] != 1 && vet[i] != 2 && vet[i] != 3)
+            }   
+
+        for( i = 0; i < 10; i++){
+
+            if(vet[i] == 1){
+                gostouMuito.push(vet[i])
+
+            }else if (vet[i] == 2){
+                gostou.push(vet[i])
+
+            }else{
+                naoGostou.push(vet[i])
+            }
+
+        }
+        porcent = (naoGostou.length / 10) * 100
+        console.log(`Gostaram muito : ${gostouMuito.length}`)
+        console.log(`Gostaram : ${gostou.length} `)
+        console.log(`Não gostaram : ${naoGostou.length}`)
+        console.log(`A porcentagem de quem nao gostou dessa bagaça é : ${porcent.toFixed(2)} %`)
 
 }
