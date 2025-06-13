@@ -106,3 +106,94 @@ function exe03profe(){
         console.log(`A porcentagem de quem nao gostou dessa bagaça é : ${porcent.toFixed(2)} %`)
 
 }
+
+function exe4(){
+
+    let i = 0, vet8 = [], acimaMedia = [], soma = 0, media = 0
+
+    for( i = 0; i < 8; i++){
+
+        do{
+      vet8[i] = Number(prompt(`Insira o ${i + 1}° numero :`))
+        }while(vet8[i] <=0 || isNaN(vet8[i]))
+
+      soma += vet8[i]
+    }
+     media = soma/8
+
+     for(i = 0; i < 8; i++){
+        if(vet8[i] > media){
+            acimaMedia.push(vet8[i])
+        }
+            
+     }
+
+     console.log(` A média calculada é : ${ media}  `)
+     console.log(` A quantidade de valores acima da média é ${acimaMedia.length } `)
+     console.log(` Os valores acima da média são: ${acimaMedia}`)
+
+}
+
+function exe5(){
+
+        let i = 0, vet10 = [], maiores = 0, menores = 0, iguais = 0
+
+        for( i = 0; i < 10; i++){
+
+            do{
+            vet10[i] = Number(prompt(` Insira o ${i +1}° valor :`))
+            }while(vet10[i] <= 0 || isNaN(vet10[i]))
+        }
+        for( i = 0; i < 10; i++){
+            if( vet10[i+1] > vet10[0]){
+                maiores++
+            }else if( vet10[i+1] < vet10[0]){
+                menores++
+            }else if( vet10[i+1] == vet10[0]){
+                iguais++
+            }
+        }
+        console.log(` Os numeros maiores que o primeiro : ${maiores}  `)
+        console.log(` Os numeros menores que o primeiro : ${menores} `)
+        console.log(` Os numeros iguais ao primeiro : ${iguais}`)
+      
+}
+function exe6() {
+
+    let vet12 = [], i = 0, numBuscado = 0, posicoes = [], quant, verdade = 0, falso = 0
+
+
+    for(i = 0; i < 12; i++){
+
+        do{
+        vet12[i] = Number(prompt(`Insira o ${i + 1}° numero :`))
+        }while(vet12[i] <= 0 || isNaN(vet12[i]))
+    }
+    
+    do{
+    numBuscado = Number(prompt(`Indira o numero a ser buscado :`))
+    }while( numBuscado <= 0 || isNaN(numBuscado))
+
+    for(i = 0; i <12; i++){
+        if(vet12[i] === numBuscado){
+         verdade++
+        }
+    }
+    if(verdade >= 1 ){
+    console.log(` O número buscado existe no vetor !!`)
+    }else{ console.log(`O numero procurado nao existe no vetor :(`) }
+
+
+
+  for( i = 0; i < 12; i++){
+    if( vet12[i] === numBuscado){
+        posicoes.push(i);
+        quant++;
+    }
+  }
+
+
+ console.log(`O número ${ numBuscado} aparece ${posicoes.length} vezes, nas posições: ${posicoes.join(", ")}`)
+
+
+}

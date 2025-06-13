@@ -12,7 +12,7 @@
         
         while(contagem <=3){
             if(w > x){
-                aux = w; w = x, x = aux // aux = a; a = b; b = aux
+                aux = w; w = x; x = aux // aux = a; a = b; b = aux
             }
             if(x > y){
                 aux = x; x = y; y = aux // aux = b; b = c; c = aux
@@ -31,37 +31,6 @@
         
         }
 
-        function exe1() {
-            let grupo = 1;  // Conta os grupos, de 1 até 5
-            let mensagem = "Resultado por ordem lida:\n"; // Para armazenar os resultados na ordem lida
-            
-            // Coleta os valores de cada grupo
-            while (grupo <= 5) { 
-                // Coleta 4 valores para cada grupo
-                let valor1 = Number(prompt(`Grupo ${grupo} - Valor 1:`));
-                let valor2 = Number(prompt(`Grupo ${grupo} - Valor 2:`));
-                let valor3 = Number(prompt(`Grupo ${grupo} - Valor 3:`));
-                let valor4 = Number(prompt(`Grupo ${grupo} - Valor 4:`));
-        
-                // Exibe os valores na ordem lida
-                mensagem += `Grupo ${grupo}: ${valor1}, ${valor2}, ${valor3}, ${valor4}\n`;
-        
-                // Ordenar os valores em ordem crescente e decrescente
-                let crescente = [valor1, valor2, valor3, valor4].sort((a, b) => a - b);
-                let decrescente = [valor1, valor2, valor3, valor4].sort((a, b) => b - a);
-        
-                // Exibe os valores ordenados
-                mensagem += `Grupo ${grupo} - Crescente: ${crescente.join(", ")}\n`;
-                mensagem += `Grupo ${grupo} - Decrescente: ${decrescente.join(", ")}\n`;
-        
-                grupo++;
-            }
-        
-            // Exibir tudo no alert
-            alert(mensagem);
-        }
-
-
         function exe2(){
 
 
@@ -70,7 +39,7 @@
             let lucro
             const despesa = 200
             let aux = ""
-            let maiolucro = 0
+            let maiorlucro = 0
             let precomaiorlucro = 0
             let qtdemaiorlucro = 0
             
